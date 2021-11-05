@@ -39,3 +39,8 @@ const patients = [
 export function getPatients() {
   return patients;
 }
+
+export function savePatient(patient){
+  
+
+}
