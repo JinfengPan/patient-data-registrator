@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { getPatients } from "./services/fakePatientDataService";
 
-class Patients extends React.Component {
+class Patients extends Component {
   state = {
     patients: getPatients(),
   };

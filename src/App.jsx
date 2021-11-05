@@ -1,13 +1,21 @@
-function App() {
-  return (
-    <main className="container">
-      <h1>慢性硬膜下血肿患者资料登记系统</h1>
-      <button className="btn btn-primary">输入新病例</button>
-      <button className="btn btn-primary">导出数据</button>
-      <button className="btn btn-primary">展示全部病例</button>
-      <button className="btn btn-primary">退出</button>
-    </main>
-  );
+import React, { Component } from "react";
+import { Route, Routes } from "react-router-dom";
+import Patients from "./Patients";
+import Home from "./home";
+import PatientForm from "./PatientForm";
+
+class App extends Component {
+  render() {
+    return (
+      <main className="container">
+        <Routes>
+          <Route path="/add" element={<PatientForm />} />
+          <Route path="/patients" element={<Patients />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </main>
+    );
+  }
 }
 
 export default App;
